@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.mycompany.pelucanina.controllers.ModificarDatosController"
+            prefHeight="650.0" prefWidth="700.0"
+            style="-fx-background-color: #f5f5f5;">
+
+    <!-- Header -->
+    <top>
+        <VBox spacing="10" style="-fx-background-color: #FF9800; -fx-padding: 20;">
+            <Label text="✏️ Modificar Datos de Mascota" textFill="white">
+                <font>
+                    <Font name="System Bold" size="28.0"/>
+                </font>
+            </Label>
+            <Label text="Edite los datos de la mascota seleccionada"
+                   textFill="#fff3e0">
+                <font>
+                    <Font size="14.0"/>
+                </font>
+            </Label>
+        </VBox>
+    </top>
+
+    <!-- Center: Formulario -->
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;">
+            <VBox spacing="20" style="-fx-padding: 30;">
+
+                <!-- Sección: Datos de la Mascota -->
+                <VBox spacing="15" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                    <Label text="🐕 Datos de la Mascota" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #FF9800;"/>
+                    <Separator/>
+
+                    <GridPane hgap="15" vgap="15">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="120" prefWidth="120"/>
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="200"/>
+                        </columnConstraints>
+
+                        <!-- Nombre -->
+                        <Label text="Nombre: *" GridPane.columnIndex="0" GridPane.rowIndex="0"
+                               style="-fx-font-weight: bold;"/>
+                        <TextField fx:id="txtNombre" promptText="Ej: Max" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                                   prefHeight="35" style="-fx-font-size: 15px; -fx-padding: 8;"/>
+
+                        <!-- Raza -->
+                        <Label text="Raza: *" GridPane.columnIndex="0" GridPane.rowIndex="1"
+                               style="-fx-font-weight: bold;"/>
+                        <ComboBox fx:id="cmbRaza" promptText="Seleccione una raza"
+                                  GridPane.columnIndex="1" GridPane.rowIndex="1"
+                                  prefHeight="35" maxWidth="Infinity" style="-fx-font-size: 15px;"/>
+
+                        <!-- Color -->
+                        <Label text="Color:" GridPane.columnIndex="0" GridPane.rowIndex="2"
+                               style="-fx-font-weight: bold;"/>
+                        <TextField fx:id="txtColor" promptText="Ej: Marrón" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                                   prefHeight="35" style="-fx-font-size: 15px; -fx-padding: 8;"/>
+
+                        <!-- Alérgico -->
+                        <Label text="Alérgico:" GridPane.columnIndex="0" GridPane.rowIndex="3"
+                               style="-fx-font-weight: bold;"/>
+                        <ComboBox fx:id="cmbAlergico" GridPane.columnIndex="1" GridPane.rowIndex="3"
+                                  prefHeight="35" prefWidth="200" style="-fx-font-size: 15px;"/>
+
+                        <!-- Atención Especial -->
+                        <Label text="Atención Especial:" GridPane.columnIndex="0" GridPane.rowIndex="4"
+                               style="-fx-font-weight: bold;"/>
+                        <ComboBox fx:id="cmbAtencionEspecial" GridPane.columnIndex="1" GridPane.rowIndex="4"
+                                  prefHeight="35" prefWidth="200" style="-fx-font-size: 15px;"/>
+                    </GridPane>
+
+                    <!-- Observaciones -->
+                    <VBox spacing="5">
+                        <Label text="Observaciones:" style="-fx-font-weight: bold;"/>
+                        <TextArea fx:id="txtObservaciones" promptText="Notas adicionales sobre la mascota..."
+                                  prefRowCount="4" wrapText="true"
+                                  style="-fx-font-size: 15px; -fx-control-inner-background: white;"/>
+                    </VBox>
+                </VBox>
+
+                <!-- Sección: Datos del Dueño -->
+                <VBox spacing="15" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                    <Label text="👤 Datos del Dueño" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2196F3;"/>
+                    <Separator/>
+
+                    <GridPane hgap="15" vgap="15">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="120" prefWidth="120"/>
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="200"/>
+                        </columnConstraints>
+
+                        <!-- Nombre Dueño -->
+                        <Label text="Nombre: *" GridPane.columnIndex="0" GridPane.rowIndex="0"
+                               style="-fx-font-weight: bold;"/>
+                        <TextField fx:id="txtNombreDuenio" promptText="Nombre completo del dueño"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="0"
+                                   prefHeight="35" style="-fx-font-size: 15px; -fx-padding: 8;"/>
+
+                        <!-- Celular -->
+                        <Label text="Celular: *" GridPane.columnIndex="0" GridPane.rowIndex="1"
+                               style="-fx-font-weight: bold;"/>
+                        <TextField fx:id="txtCelDuenio" promptText="Ej: 3512345678"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="1"
+                                   prefHeight="35" style="-fx-font-size: 15px; -fx-padding: 8;"/>
+
+                        <!-- Dirección -->
+                        <Label text="Dirección: *" GridPane.columnIndex="0" GridPane.rowIndex="2"
+                               style="-fx-font-weight: bold;"/>
+                        <TextField fx:id="txtDireccion" promptText="Calle y número"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="2"
+                                   prefHeight="35" style="-fx-font-size: 15px; -fx-padding: 8;"/>
+
+                        <!-- Código Postal -->
+                        <Label text="Código Postal:" GridPane.columnIndex="0" GridPane.rowIndex="3"
+                               style="-fx-font-weight: bold;"/>
+                        <TextField fx:id="txtCodigoPostal" promptText="Ej: 5000"
+                                   GridPane.columnIndex="1" GridPane.rowIndex="3"
+                                   prefHeight="35" prefWidth="200" style="-fx-font-size: 15px; -fx-padding: 8;"/>
+                    </GridPane>
+                </VBox>
+
+                <!-- Nota de campos obligatorios -->
+                <Label text="* Campos obligatorios" style="-fx-text-fill: #666; -fx-font-style: italic;"/>
+            </VBox>
+        </ScrollPane>
+    </center>
+
+    <!-- Bottom: Botones -->
+    <bottom>
+        <HBox spacing="15" alignment="CENTER"
+              style="-fx-background-color: white; -fx-padding: 20; -fx-border-color: #ddd; -fx-border-width: 1 0 0 0;">
+
+            <Button fx:id="btnGuardar" text="💾 Guardar Cambios"
+                    onAction="#handleGuardar"
+                    prefWidth="180.0" prefHeight="40.0"
+                    style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5;">
+            </Button>
+
+            <Button fx:id="btnCancelar" text="❌ Cancelar"
+                    onAction="#handleCancelar"
+                    prefWidth="150.0" prefHeight="40.0"
+                    style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5;">
+            </Button>
+        </HBox>
+    </bottom>
+
+</BorderPane>

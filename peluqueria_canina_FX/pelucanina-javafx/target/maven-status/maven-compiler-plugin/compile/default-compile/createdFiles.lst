@@ -1,0 +1,16 @@
+com\mycompany\pelucanina\persistencia\MascotaEliminadaJpaController.class
+com\mycompany\pelucanina\controllers\PapeleraController.class
+com\mycompany\pelucanina\controllers\PrincipalController.class
+com\mycompany\pelucanina\controllers\VerDatosController.class
+com\mycompany\pelucanina\logica\Raza.class
+com\mycompany\pelucanina\persistencia\ControladoraPersistencia.class
+com\mycompany\pelucanina\persistencia\DuenioJpaController.class
+com\mycompany\pelucanina\persistencia\MascotaJpaController.class
+com\mycompany\pelucanina\logica\Duenio.class
+com\mycompany\pelucanina\Main.class
+com\mycompany\pelucanina\logica\Mascota.class
+com\mycompany\pelucanina\logica\Controladora.class
+com\mycompany\pelucanina\controllers\CargarDatosController.class
+com\mycompany\pelucanina\logica\MascotaEliminada.class
+com\mycompany\pelucanina\persistencia\RazaJpaController.class
+com\mycompany\pelucanina\controllers\ModificarDatosController.class
